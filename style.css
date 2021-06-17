@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;900&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(32, 32, 32, 1) 0%, rgba(117, 117, 117, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.music-container {
+    padding: 10px 30px;
+    position: relative;
+    margin: 2% 0;
+    z-index: 10;
+}
+
+.img-container {
+    position: relative;
+    width: 100%;
+}
+
+.img-container::after {
+    content: '';
+    background-color: rgb(66, 66, 66);
+    height: 50px;
+    border: 2px solid rgb(139, 139, 139);
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, 50%);
+    box-shadow: inset 3px 4px 5px rgba(32, 32, 32, 1);
+}
+
+.img-container img {
+    width: inherit;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: fill;
+    box-shadow: 3px 3px 5px 2px rgba(32, 32, 32, 1);
+    animation: rotate 15s linear infinite;
+    animation-play-state: paused;
+}
+
+.music-container.play .img-container img {
+    animation-play-state: running;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.action-btn {
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 2.25rem;
+    margin: 0 5%;
+    cursor: pointer;
+}
+
+.action-btn-big {
+    color: #cfcfcf;
+    font-size: 3.5rem;
+}
+
+.action-btn:focus {
+    outline: 0;
+}
+
+.music-info {
+    color: white;
+    padding: 25px;
+}
+
+#title {
+    margin-bottom: 15px;
+}
+
+#artist {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.progress-container {
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 2em 0;
+    height: 4px;
+    width: 100%;
+}
+
+.progress {
+    background-color: #bd1788;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
