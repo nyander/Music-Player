@@ -4,7 +4,7 @@
 }
 
 body {
-    height: 120%;
+    height: 100vh;
     margin-bottom: 5px;
     font-family: 'Montserrat', sans-serif;
     background: rgb(2, 0, 36);
