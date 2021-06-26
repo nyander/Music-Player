@@ -4,7 +4,8 @@
 }
 
 body {
-    height: 100vh;
+    max-height: 100vh;
+    height: 100%;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     background: rgb(2, 0, 36);
@@ -128,4 +129,10 @@ body {
 .bio {
     font-size: 12px;
     color: rgb(230, 230, 230);
+}
+
+#privacy {
+    color: rgb(230, 230, 230);
+    width: 75%;
+    text-align: center;
 }
