@@ -4,8 +4,7 @@
 }
 
 body {
-    max-height: 100vh;
-    height: 100%;
+    height: 100vh;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     background: rgb(2, 0, 36);
@@ -24,7 +23,9 @@ body {
 
 .img-container {
     position: relative;
-    width: 100%;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
 }
 
 .img-container::after {
